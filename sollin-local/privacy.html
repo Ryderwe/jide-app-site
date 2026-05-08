@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sollin · 隐私政策</title>
+  <meta name="description" content="Sollin 音乐播放器的隐私政策，说明应用如何处理本地音频文件、歌词、Live Activities 与缓存数据。">
+  <style>
+    :root {
+      --bg-0: #07060d;
+      --bg-1: #0f0e1f;
+      --bg-2: #181631;
+      --sheet: rgba(22, 22, 44, 0.78);
+      --ink: #f4f1ff;
+      --muted: #a8a3c4;
+      --accent: #b58cff;
+      --accent-2: #6cd6ff;
+      --line: rgba(255, 255, 255, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(900px 480px at 12% -10%, rgba(181, 140, 255, 0.28), transparent 60%),
+        radial-gradient(800px 480px at 95% 0%, rgba(108, 214, 255, 0.18), transparent 55%),
+        linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 55%, var(--bg-2) 100%);
+      background-attachment: fixed;
+      color: var(--ink);
+      line-height: 1.78;
+      min-height: 100vh;
+    }
+    .wrap {
+      width: min(920px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 22px;
+      transition: color .2s ease, background .2s ease, border .2s ease;
+    }
+    .back:hover {
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(181, 140, 255, 0.4);
+    }
+    .panel {
+      background: var(--sheet);
+      border-radius: 28px;
+      padding: 40px;
+      border: 1px solid var(--line);
+      box-shadow: 0 32px 80px rgba(7, 6, 24, 0.55);
+      backdrop-filter: blur(22px) saturate(140%);
+      -webkit-backdrop-filter: blur(22px) saturate(140%);
+    }
+    h1, h2, p, li { margin-top: 0; }
+    h1 {
+      font-size: clamp(34px, 5vw, 52px);
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+      background: linear-gradient(120deg, #ffffff 0%, #d4c5ff 50%, #9be3ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    p, li { color: var(--muted); font-size: 15.5px; }
+    ul { padding-left: 22px; margin: 0; }
+    li::marker { color: var(--accent); }
+    strong.inline {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .meta {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(181, 140, 255, 0.12);
+      border: 1px solid rgba(181, 140, 255, 0.28);
+      color: #ddd0ff;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .meta .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 10px var(--accent-2);
+    }
+    .lede {
+      font-size: 17px;
+      color: rgba(244, 241, 255, 0.85);
+    }
+    .block {
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      margin-top: 22px;
+    }
+    .footer-note {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13.5px;
+      text-align: right;
+    }
+    .footer-note a { color: var(--accent-2); }
+    @media (max-width: 640px) {
+      .panel { padding: 26px; border-radius: 22px; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回应用介绍</a>
+    <article class="panel">
+      <span class="meta"><span class="dot"></span>Privacy Policy</span>
+      <h1>Sollin 隐私政策</h1>
+      <p class="lede">
+        Sollin 是一款本地优先的音乐播放器。我们尊重并保护用户隐私，本政策说明应用在 iPhone 与 iPad 上处理本地音乐、歌词、缓存与系统权限的方式。
+      </p>
+      <p style="margin-top: 12px;">更新日期：2026-05-09</p>
+
+      <div class="block">
+        <h2>1. 我们处理哪些信息</h2>
+        <ul>
+          <li><strong class="inline">本地音频文件</strong>：你通过系统"文件"App 选择导入或打开的音频文件，仅在设备本地读取与播放。</li>
+          <li><strong class="inline">媒体元数据</strong>：从音频文件本身解析的标题、艺人、专辑、封面、CUE 等元信息，仅用于本地媒体库展示。</li>
+          <li><strong class="inline">歌词文件</strong>：与音频同名或随音频导入的 .lrc / 内嵌歌词，仅在本地解析与展示。</li>
+          <li><strong class="inline">播放与库索引</strong>：歌曲列表、播放队列、播放进度、最近播放等，仅写入设备本地的 SQLite 库。</li>
+          <li><strong class="inline">缓存数据</strong>：为加速封面显示与非原生格式播放（例如 APE → ALAC）所生成的缓存文件，全部位于本应用的沙盒目录。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>2. 我们不会收集哪些信息</h2>
+        <ul>
+          <li>不要求注册账号，不收集姓名、邮箱、手机号或任何个人身份信息。</li>
+          <li>不会上传你的音频文件、歌词、播放记录到任何服务器。</li>
+          <li>不内置广告 SDK，不进行第三方追踪、用户画像或行为分析。</li>
+          <li>不读取通讯录、相册、位置、健康、麦克风或相机权限。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>3. 这些信息的用途</h2>
+        <ul>
+          <li>用于在本地构建媒体库、进行专辑 / 艺人 / 合集分组。</li>
+          <li>用于解码并播放音频，以及在锁屏 / 控制中心 / 灵动岛展示当前曲目和歌词。</li>
+          <li>用于记录上次播放进度，以便恢复时回到原来位置。</li>
+          <li>用于为非原生格式生成可复用的本地缓存，避免每次重复转码。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>4. 权限与系统能力</h2>
+        <ul>
+          <li><strong class="inline">文件访问</strong>：仅在你主动通过系统"文件"App 选择文件 / 文件夹时使用，应用只读取你选择的内容。</li>
+          <li><strong class="inline">后台音频（UIBackgroundModes: audio）</strong>：用于在 App 后台或锁屏时继续播放当前队列。</li>
+          <li><strong class="inline">Live Activities（NSSupportsLiveActivities）</strong>：用于在锁屏与灵动岛上展示当前曲目和逐行歌词，仅在播放时存在。</li>
+          <li><strong class="inline">应用内文件共享（UIFileSharingEnabled / LSSupportsOpeningDocumentsInPlace）</strong>：允许通过"文件"App 直接管理 Sollin 沙盒内的音乐文件，并支持以"用 Sollin 打开"的方式导入音频。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>5. 数据存储与同步</h2>
+        <p>所有曲目、媒体库索引、播放记录与缓存默认仅保存在本设备的应用沙盒内。Sollin 不主动上传、同步或备份任何数据到第三方服务器。如果你启用了 iOS 系统层面的 iCloud 备份，沙盒数据可能随系统备份策略一起被备份到你的 iCloud 账户，这部分由系统而非本应用控制。</p>
+      </div>
+
+      <div class="block">
+        <h2>6. 数据共享</h2>
+        <p>Sollin 不会主动将你的本地音频、歌词、播放记录等任何数据共享给任何第三方。除非你主动通过系统"分享"功能将文件分享给其他 App，否则数据保留在本设备内。</p>
+      </div>
+
+      <div class="block">
+        <h2>7. 用户控制</h2>
+        <ul>
+          <li>你可以在应用"设置 → 数据清理"中清除封面 / 转码缓存，或一键清空全部歌曲与媒体库。</li>
+          <li>你可以在系统设置中限制 Sollin 的"文件 / 文件夹"访问权限。</li>
+          <li>你可以随时关闭灵动岛 Live Activities：在系统设置或 App 内停止播放即可结束 Activity。</li>
+          <li>你可以随时在系统中删除本 App，所有沙盒内的数据将随之被系统移除。</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>8. 儿童隐私</h2>
+        <p>Sollin 不针对 13 岁以下儿童设计，不主动收集儿童的个人信息。如发现误收集相关信息，将立即从本地清除。</p>
+      </div>
+
+      <div class="block">
+        <h2>9. 政策更新</h2>
+        <p>当应用功能或权限发生重大变化时，我们会同步更新本页面，并在页面顶部更新"更新日期"。继续使用应用即视为接受最新版本。</p>
+      </div>
+
+      <div class="block">
+        <h2>10. 联系方式</h2>
+        <p>如果你对本隐私政策有疑问，可以通过 App Store 应用页面提供的开发者联系方式与我们联系。</p>
+      </div>
+
+      <p class="footer-note">© 2026 Sollin · <a href="index.html">返回应用介绍</a></p>
+    </article>
+  </div>
+</body>
+</html>
