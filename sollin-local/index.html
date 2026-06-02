@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sollin · 本地优先的全格式音乐播放器</title>
-  <meta name="description" content="Sollin 是一款面向 iPhone 与 iPad 的本地优先音乐播放器，原生支持 FLAC / APE / ALAC / WAV / MP3 等格式，提供 Apple Music 风格的浏览、灵动岛歌词与后台播放体验。">
+  <meta name="description" content="Sollin 是一款面向 iPhone 与 iPad 的本地优先音乐播放器，原生支持 FLAC / APE / ALAC / WAV / MP3 等格式，提供现代媒体库浏览、灵动岛歌词、后台播放和支持反馈入口。">
   <style>
     :root {
       --bg-0: #07060d;
@@ -433,6 +433,12 @@
       text-underline-offset: 3px;
     }
 
+    .feature a {
+      color: var(--accent-2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .footer {
       margin-top: 28px;
       display: flex;
@@ -472,6 +478,7 @@
       <nav class="nav">
         <a href="#features">功能</a>
         <a href="#formats">支持格式</a>
+        <a href="#support">支持</a>
         <a href="#privacy">隐私</a>
         <a href="privacy.html">隐私政策全文</a>
       </nav>
@@ -483,11 +490,11 @@
           <span class="eyebrow"><span class="dot"></span>Local-first · iPhone & iPad</span>
           <h1>把整张专辑，留在本地。</h1>
           <p class="lede">
-            Sollin 是一款本地优先的全格式音乐播放器。原生 AVAudioEngine 直解 + FFmpeg 备援让 FLAC / APE / ALAC / WAV / MP3 等文件一键就能播放；Apple Music 风格的浏览、灵动岛歌词与系统控制中心，让本地音乐听起来仍像 2026 年。
+            Sollin 是一款本地优先的全格式音乐播放器。原生 AVAudioEngine 直解 + FFmpeg 备援让 FLAC / APE / ALAC / WAV / MP3 等文件一键就能播放；现代媒体库浏览、灵动岛歌词与系统控制中心，让本地音乐听起来仍像 2026 年。
           </p>
           <div class="cta-row">
             <a class="button primary" href="#features">了解功能</a>
-            <a class="button secondary" href="privacy.html">查看隐私政策</a>
+            <a class="button secondary" href="#support">获取支持</a>
           </div>
         </div>
         <aside class="card hero-side">
@@ -524,7 +531,7 @@
               <p>常规格式走 AVAudioEngine 原生通道；APE 等长尾格式自动转码为 ALAC 缓存后无损播放。</p>
             </div>
             <div class="feature">
-              <h3>Apple Music 风格浏览</h3>
+              <h3>现代媒体库浏览</h3>
               <p>媒体库、合集、专辑、歌手等多维度浏览，封面后台解码与下采样保证滚动顺滑。</p>
             </div>
             <div class="feature">
@@ -578,7 +585,7 @@
 
         <section class="card" id="privacy">
           <h2 class="section-title">审核相关隐私说明</h2>
-          <p class="section-copy">Sollin 以"零账户、零联网"为默认状态。下列权限仅在你主动使用对应功能时启用。</p>
+          <p class="section-copy">Sollin 的本地播放、导入和媒体库功能默认不需要账户。可选 Apple ID 登录、App Store 内购与恢复购买仅通过 Apple 系统服务完成。</p>
           <div class="feature-list">
             <div class="feature">
               <h3>文件 / 文件夹访问</h3>
@@ -593,12 +600,35 @@
               <p>用于在 App 退到后台或锁屏时继续播放当前队列，并保持系统播放控制中心信息更新。</p>
             </div>
             <div class="feature">
-              <h3>无账户 · 无网络 · 无追踪</h3>
-              <p>Sollin 不需要注册账号，默认不进行任何网络请求，不内置广告 SDK，不进行用户行为分析。</p>
+              <h3>可选账户 · 可删除</h3>
+              <p>Apple ID 登录只用于在本机保存账户资料。你可以在 App 的"我的 → 账户 → 更多 → 删除账户"中删除本机保存的 Apple 登录标识、邮箱、昵称和头像。</p>
+            </div>
+            <div class="feature">
+              <h3>无广告 · 无追踪</h3>
+              <p>Sollin 不内置广告 SDK，不进行第三方追踪、用户画像或行为分析。</p>
             </div>
           </div>
           <div class="notice">
             完整隐私政策请查看 <a href="privacy.html"><strong>privacy.html</strong></a>。该页面可直接作为 App Store 审核提交用的隐私政策链接。
+          </div>
+        </section>
+
+        <section class="card" id="support">
+          <h2 class="section-title">支持与反馈</h2>
+          <p class="section-copy">如果你在导入、播放、歌词、账户删除或应用内购买中遇到问题，可以通过以下方式联系开发者。</p>
+          <div class="feature-list">
+            <div class="feature">
+              <h3>邮件支持</h3>
+              <p>发送邮件至 <a href="mailto:ryderwe@163.com?subject=Sollin%20Support">ryderwe@163.com</a>。通常请在邮件中说明 App 版本、设备型号、iOS / iPadOS 版本和复现步骤。</p>
+            </div>
+            <div class="feature">
+              <h3>购买与恢复购买</h3>
+              <p>如果高级版页面没有显示商品，请先确认网络和 Apple ID 状态，再在 App 内点击"重新读取商品"或"恢复购买"。仍无法解决时，请附上错误提示截图联系支持。</p>
+            </div>
+            <div class="feature">
+              <h3>账户删除路径</h3>
+              <p>在 App 内进入"我的"，点击账户卡片右侧的更多按钮，选择"删除账户"，确认后即可删除本机保存的账户资料。</p>
+            </div>
           </div>
         </section>
       </div>
@@ -606,7 +636,7 @@
 
     <footer class="footer">
       <span>Sollin · 本地优先音乐播放器</span>
-      <span>最后更新：2026-05-09 · <a href="privacy.html">隐私政策</a></span>
+      <span>最后更新：2026-06-02 · <a href="privacy.html">隐私政策</a></span>
     </footer>
   </div>
 </body>
