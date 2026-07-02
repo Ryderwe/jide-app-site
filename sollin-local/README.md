@@ -1,8 +1,8 @@
 # Sollin 静态页面
 
-用于 App Store 审核提交的产品介绍页和隐私政策页。
+用于 App Store 审核提交的支持页、产品介绍页和隐私政策页。
 
-- `index.html`：应用介绍
+- `index.html`：支持与反馈 / 应用介绍
 - `privacy.html`：隐私政策
 
 部署在 GitHub Pages：
